@@ -2,16 +2,16 @@
 CC=gcc
 CFLAGS=-Wall -pthread -g
 LIBS=
-OBJS=swap1.o options.o
+OBJS=swap.o options.o
 
-PROGS= swap1
+PROGS= swap
 
 all: $(PROGS)
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $<
 
-swap1: $(OBJS)
+swap: $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
 
 clean:
